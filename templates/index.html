@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Sistema Biométrico</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Sistema Biométrico</h1>
+
+        <div class="scanner"></div>
+
+        <input
+            type="text"
+            id="nome"
+            placeholder="Nome do funcionário">
+
+        <input
+            type="text"
+            id="digital"
+            placeholder="ID da Digital">
+
+        <button onclick="cadastrarFuncionario()">
+            Cadastrar Funcionário
+        </button>
+
+        <button onclick="baterPonto()">
+            Bater Ponto
+        </button>
+
+        <div id="resultado"></div>
+
+        <h2>Registros</h2>
+
+        <div id="lista-registros"></div>
+
+    </div>
+
+    <script
+        src="{{ url_for('static', filename='script.js') }}">
+    </script>
+
+</body>
+
+</html>
